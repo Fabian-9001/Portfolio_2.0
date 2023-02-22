@@ -1,35 +1,34 @@
-import Image from 'next/image'
 import Link from 'next/link'
 import { useState } from 'react'
-import style from '../styles/index.module.css'
 
 const Navbar = () => {
-    const [isActive, setIsActive] = useState(false)
-    return (
-        <nav className='fixed z-[2] top-0 left-0 w-full h-[100px] flex items-center justify-end px-[100px]'>
-            <ul className={`fixed top-0 left-0 w-full min-h-[100vh] bg-black  text-[1.3rem] text-white flex flex-col items-center justify-center gap-[20px]
-            ${isActive ? '' : 'hidden'}`}>
-                <li>
-                    <Link href={'/about'}>About</Link>
-                </li>
-                <li>
-                    <Link href={'skills'}>My Skills</Link>
-                </li>
-                <li>
-                    <Link href={'/experience'}>Experience</Link>
-                </li>
-                <li>
-                    <Link href={'/work'}>Work</Link>
-                </li>
-                <li>
-                    <Link href={'/contact'}>Contact</Link>
-                </li>
-            </ul>
-            <button className=' bg-[#282828] p-[10px] rounded-[10px]' onClick={() => setIsActive(!isActive)}>
-                <Image className={style.menu} width={40} height={40} src={'/img/menu.png'} alt='' />
-            </button>
-        </nav>
-    )
+  const [isActive, setIsActive] = useState(false)
+
+  return (
+    <nav
+      onScroll={() => setIsActive(isActive)}
+      className={`fixed z-[2] left-[50%] translate-x-[-50%] w-full h-[100px] bg-[#252525] md:w-[calc(100%-200px)]
+    ${isActive ? 'top-0' : 'top-[-100px]'}`}
+    >
+      <ul className={'w-full h-full flex items-center justify-evenly'}>
+        <li>
+          <a href={'#about'}>Home</a>
+        </li>
+        <li>
+          <a href={'#kills'}>About Me</a>
+        </li>
+        <li>
+          <a href={'#experience'}>Experience</a>
+        </li>
+        <li>
+          <a href={'#work'}>Projects</a>
+        </li>
+        <li>
+          <a href={'#contact'}>Contact</a>
+        </li>
+      </ul>
+    </nav>
+  )
 }
 
 export default Navbar

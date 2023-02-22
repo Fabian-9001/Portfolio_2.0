@@ -1,12 +1,12 @@
-import 'animate.css';
-import Head from 'next/head';
-import Image from 'next/image';
-import style from '../styles/index.module.css';
-import Letter from '@/components/Letter';
-import Link from 'next/link';
+import 'animate.css'
+import Head from 'next/head'
+import Image from 'next/image'
+import style from '../styles/index.module.css'
+import Letter from '@/components/Letter'
+import Link from 'next/link'
 import SliderCube from '../components/SliderCube'
-import Project from '@/components/Project';
-import { useState } from 'react';
+import Project from '@/components/Project'
+import { useState } from 'react'
 
 export default function Home() {
   const [typeOfProject, setTypeOfProject] = useState('Front-End')
@@ -64,8 +64,12 @@ export default function Home() {
           </div>
         </h1>
         <div className={`flex flex-col gap-[5px] ${style.p} relative`}>
-          <p className='text-[#8d8d8d] text-[1.1rem] whitespace-nowrap sm:text-[1.4rem] font-[500]'>Front-End Developer / React - Next Js</p>
-          <p className='text-[#8d8d8d] text-[1.1rem] whitespace-nowrap sm:text-[1.4rem] font-[500]'>Back End Developer / Express </p>
+          <p className='text-[#8d8d8d] text-[1.1rem] whitespace-nowrap sm:text-[1.4rem] font-[500]'>
+            Front-End Developer / React - Next Js
+          </p>
+          <p className='text-[#8d8d8d] text-[1.1rem] whitespace-nowrap sm:text-[1.4rem] font-[500]'>
+            Back End Developer / Express{' '}
+          </p>
         </div>
         <div className={`flex gap-[10px] ${style.div} relative`}>
           <button className='text-[1.1rem] border-[2px] border-white min-w-[150px] h-[40px] hover:bg-white hover:text-[#282828] duration-[0.3s]'>
@@ -79,7 +83,9 @@ export default function Home() {
 
       <div className='w-full min-h-[100vh] flex flex-wrap gap-[20px] items-center justify-center'>
         <div className='lg:w-[50%] text-[#8d8d8d] text-[1.1rem] flex flex-col gap-[60px]'>
-          <div className={`flex gap-[15px] text-[8vw] font-bold text-white sm:text-[50px] ${style.h1} relative`}>
+          <div
+            className={`flex gap-[15px] text-[8vw] font-bold text-white sm:text-[50px] ${style.h1} relative`}
+          >
             <div className='flex'>
               <Letter text={'A'} />
               <Letter text={'b'} />
@@ -93,15 +99,31 @@ export default function Home() {
             </div>
           </div>
           <p className={`text-white ${style.p} relative`}>
-            Hello! My name is Fabián and I enjoy learning and creating projects. My career with developer began in 2021 when my interest in programming skyrocketed knowing
-            everything that could be done with it, for example, websites and applications, video games, AI, etc. But it turns out that entering this world was not as easy as I thought,
-            since I had to learn things like programming languages, frameworks, libraries and a lot of things that I didn't know. So I decided to start from the basics, HTML and CSS!
-            Fast forward and I had the opportunity to work in a great company focused on training new developers. My main focus is performance, accessibility and aesthetics in products
-            offering better digital experiences. Here are some technologies I've been working with recently:
+            Hello! My name is Fabián and I enjoy learning and creating projects.
+            My career with developer began in 2021 when my interest in
+            programming skyrocketed knowing everything that could be done with
+            it, for example, websites and applications, video games, AI, etc.
+            But it turns out that entering this world was not as easy as I
+            thought, since I had to learn things like programming languages,
+            frameworks, libraries and a lot of things that I didn{'&apos;'}t
+            know. So I decided to start from the basics, HTML and CSS! Fast
+            forward and I had the opportunity to work in a great company focused
+            on training new developers. My main focus is performance,
+            accessibility and aesthetics in products offering better digital
+            experiences. Here are some technologies I {'&apos;'} ve been working
+            with recently:
           </p>
         </div>
-        <div className={`w-[100%] h-[80vw] max-w-[400px] max-h-[400px] relative ${style.photo} brightness-[80%] hover:brightness-[100%] duration-[0.3s] mx-auto`}>
-          <Image loading='lazy' style={{ objectFit: 'cover', zIndex: 1 }} fill={true} src={'/img/photo.jpg'} alt='' />
+        <div
+          className={`w-[100%] h-[80vw] max-w-[400px] max-h-[400px] relative ${style.photo} brightness-[80%] hover:brightness-[100%] duration-[0.3s] mx-auto`}
+        >
+          <Image
+            loading='lazy'
+            style={{ objectFit: 'cover', zIndex: 1 }}
+            fill={true}
+            src={'/img/photo.jpg'}
+            alt=''
+          />
         </div>
       </div>
 
@@ -121,11 +143,10 @@ export default function Home() {
         <div className='flex flex-wrap gap-[20px] items-center justify-center'>
           <SliderCube
             company={'Academlo'}
-            rol={'Front-End Dev'}
+            rol={'Front-End Developer'}
             technologies={'Next Js - TypeScript'}
             project={'For When?'}
             summary={'dhfkdshfkhdskhfkhsdk'}
-            work={'ljlsfldjflsdlfjldslfdlsjf'}
           />
         </div>
       </div>
@@ -146,36 +167,95 @@ export default function Home() {
             <button
               onClick={() => setTypeOfProject('Front-End')}
               className={`text-[1.1rem] border-[2px] border-white min-w-[150px] h-[40px] hover:bg-white hover:text-[#282828] duration-[0.3s] 
-             ${typeOfProject === 'Front-End' && 'bg-white text-black'}`}>
+             ${typeOfProject === 'Front-End' && 'bg-white text-black'}`}
+            >
               Front-End
             </button>
             <button
               onClick={() => setTypeOfProject('Back-End')}
               className={`text-[1.1rem] border-[2px] border-white min-w-[150px] h-[40px] hover:bg-white hover:text-[#282828] duration-[0.3s] 
-              ${typeOfProject === 'Back-End' && 'bg-white text-black'}`}>
+              ${typeOfProject === 'Back-End' && 'bg-white text-black'}`}
+            >
               Back-End
             </button>
           </header>
           <div className='w-full h-full'>
-            {
-              typeOfProject === 'Front-End' ?
-                <div className='grid grid-cols-1  justify-items-center lg:grid-cols-2 gap-[30px]'>
-                  <Project img={'/img/prueba.jpeg'} />
-                  <Project img={'/img/prueba.jpeg'} />
-                  <Project img={'/img/prueba.jpeg'} />
-                </div>
-                :
-                <div className='grid grid-cols-1  justify-items-center lg:grid-cols-2 gap-[30px]'>
-                  <Project />
-                  <Project />
-                </div>
-            }
+            {typeOfProject === 'Front-End' ? (
+              <div className='grid grid-cols-1  justify-items-center lg:grid-cols-2 gap-[30px]'>
+                <Project
+                  type={'Front-End'}
+                  img={'/img/projects/pokedex.png'}
+                  title={'Pokedex'}
+                  technologies={'CSS3 | JAVASCRIPT (ES6) | REACT JS | REDUX '}
+                  deployLink={'https://poke-api-9001.netlify.app'}
+                  codeLink={'https://github.com/Fabian-9001/POKE-API'}
+                />
+                <Project
+                  type={'Front-End'}
+                  img={'/img/projects/rick_and_morty.png'}
+                  title={'Rick and Morty'}
+                  technologies={'CSS3 | JAVASCRIPT (ES6) | REACT JS'}
+                  deployLink={'https://rick-and-morty-9001.netlify.app'}
+                  codeLink={
+                    'https://github.com/Fabian-9001/Rick-and-Morty-App.git'
+                  }
+                />
+                <Project
+                  type={'Front-End'}
+                  img={'/img/projects/quotes.png'}
+                  title={'Quotes'}
+                  technologies={'CSS3 | JAVASCRIPT (ES6) | REACT JS '}
+                  deployLink={'https://notebook-quotes-ramdom.netlify.app'}
+                  codeLink={
+                    'https://github.com/Fabian-9001/Notebook-Quotes-Ramdom.git'
+                  }
+                />
+                <Project
+                  type={'Front-End'}
+                  img={'/img/projects/weather.png'}
+                  title={'Weather'}
+                  technologies={'CSS3 | JAVASCRIPT (ES6) | REACT JS '}
+                  deployLink={'https://weather-app-ramdom-img.netlify.app'}
+                  codeLink={'https://github.com/Fabian-9001/Weather-App.git'}
+                />
+              </div>
+            ) : (
+              <div className='grid grid-cols-1  justify-items-center lg:grid-cols-2 gap-[30px]'>
+                <Project
+                  type={'Back-End'}
+                  img={'/img/projects/genshin_impact.jpg'}
+                  title={'Genshin Impact'}
+                  technologies={
+                    'JAVASCRIPT (ES6) | POSTGRES | SQL | EXPRESS | SEQUELIZE | ORM | JWT | MVC'
+                  }
+                  deployLink={''}
+                  codeLink={
+                    'https://github.com/Fabian-9001/Genshin-Impact-BackEnd.git'
+                  }
+                />
+                <Project
+                  type={'Back-End'}
+                  img={'/img/projects/tasks.jpg'}
+                  title={'Tasks'}
+                  technologies={
+                    'JAVASCRIPT (ES6) | POSTGRES | SQL | EXPRESS | SEQUELIZE | ORM | JWT | MVC'
+                  }
+                  deployLink={''}
+                  codeLink={
+                    'https://github.com/Fabian-9001/Tasks-Full-Stack.git'
+                  }
+                />
+              </div>
+            )}
           </div>
         </div>
       </div>
 
       <div className='w-full min-h-[100vh] mt-[150px]'>
-        <div id='contact' className='flex gap-[15px] text-[8vw] font-bold text-white sm:text-[50px]'>
+        <div
+          id='contact'
+          className='flex gap-[15px] text-[8vw] font-bold text-white sm:text-[50px]'
+        >
           <div className='flex'>
             <Letter text={'C'} />
             <Letter text={'o'} />
@@ -190,21 +270,39 @@ export default function Home() {
             <Letter text={'e'} />
           </div>
         </div>
-        <form className='w-full h-auto flex flex-col items-center justify-center gap-[20px]'>
+        <form
+          className={`w-full h-auto flex flex-col items-center justify-center gap-[20px] ${style.form} relative`}
+        >
           <div className='w-full flex gap-[20px]'>
-            <input className='w-full h-[50px] px-[20px]' type="text" placeholder='Name' />
-            <input className='w-full h-[50px] px-[20px]' type="text" placeholder='email' />
+            <input
+              className='w-full h-[50px] px-[20px]'
+              type='text'
+              placeholder='Name'
+            />
+            <input
+              className='w-full h-[50px] px-[20px]'
+              type='text'
+              placeholder='email'
+            />
           </div>
           <div className='w-full'>
-            <input className='w-full h-[50px] px-[20px]' type="text" placeholder='subject' />
+            <input
+              className='w-full h-[50px] px-[20px]'
+              type='text'
+              placeholder='subject'
+            />
           </div>
           <div className='w-full'>
-            <textarea className='w-full h-[150px] px-[20px]' id="" cols="30" rows="10"></textarea>
+            <textarea
+              className='w-full h-[150px] px-[20px]'
+              id=''
+              cols='30'
+              rows='10'
+            ></textarea>
           </div>
           <button className='w-full h-[50px] border'>Send</button>
         </form>
       </div>
-
     </div>
   )
 }

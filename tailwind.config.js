@@ -14,9 +14,9 @@ module.exports = {
     extend: {
       fontFamily: {
         OpenSans: ['Open Sans', 'sans-serif'],
-        Aurore: ['La Belle Aurore', 'cursive']
-      }
-    }
+        Aurore: ['La Belle Aurore', 'cursive'],
+      },
+    },
   },
   plugins: [],
 }
